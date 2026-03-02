@@ -5,72 +5,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
 <!-- ================= SEO OPTIMIZATION ================= -->
-<title>Dr. Karishma Ashok | Specialist Periodontist & Oral Implantologist</title>
-<meta name="description" content="Dr. Karishma Ashok (MDS) provides bespoke surgical care in Dental Implants and Periodontology. The intersection of clinical precision and aesthetic artistry.">
+<title>Dr. Karishma Ashok | Specialist Periodontist & Oral Implantologist | Seawoods, Navi Mumbai</title>
+<meta name="description" content="Dr. Karishma Ashok (MDS) - Specialist Periodontist and Oral Implantologist. Owner of Dr Karishma's Dental Clinic and Implant Centre, Seawoods, Navi Mumbai.">
+<meta name="keywords" content="Periodontist Seawoods, Dental Implants Navi Mumbai, Dr Karishma Ashok, MDS Periodontics, Oral Implantology Fellowship">
 
 <!-- Favicon -->
 <link rel="icon" href="https://img.icons8.com/ios-filled/50/ffffff/dentures.png" type="image/png">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root {
     --pad-x: 6%;
     --pad-y: 80px;
     --grid-gap: 24px;
-    --primary-medical: #e2e8f0; /* Platinum Silver */
-    --accent-glow: rgba(0, 210, 255, 0.4);
-    --bg-deep: #020617; /* Luxury Midnight Navy */
+    --primary-medical: #00d2ff;
+    --deep-slate: #0a0f14;
+    --accent-teal: #14b8a6;
 }
 
 @media (min-width: 768px) {
     :root {
         --pad-x: 8%;
-        --pad-y: 120px;
+        --pad-y: 100px;
+        --grid-gap: 40px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     :root {
-        --pad-x: 12%;
-        --pad-y: 160px;
+        --pad-x: 10%;
+        --pad-y: 130px;
+        --grid-gap: 50px;
     }
 }
 
-* { 
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0; 
-    -webkit-tap-highlight-color: transparent; /* Clean touch for iOS/Android */
-}
-
-html {
-    scroll-behavior: smooth;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background: var(--bg-deep); 
-    color: #f8fafc;
-    font-family: 'Inter', sans-serif;
+    background: #060a0d; 
+    color: #f5f5f5;
+    font-family: Inter, sans-serif;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
     overflow-x: hidden;
-    letter-spacing: -0.01em;
 }
 
-/* ================= LUXURY TEXTURE ================= */
-body::before {
-    content: "";
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-    opacity: 0.03; pointer-events: none; z-index: 1;
-}
-
+/* ================= AMBIENT MEDICAL GLOW ================= */
 .ambient-glow {
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     pointer-events: none; z-index: 0;
     background: 
-        radial-gradient(circle at 10% 20%, rgba(30, 64, 175, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(15, 118, 110, 0.08) 0%, transparent 40%);
+        radial-gradient(circle at 15% 30%, rgba(20, 184, 166, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 85% 70%, rgba(0, 210, 255, 0.04) 0%, transparent 40%);
+}
+
+.sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
 }
 
 section { 
@@ -83,372 +74,474 @@ section {
 
 h1, h2, h3 {
     font-family: "Cormorant Garamond", serif;
-    font-weight: 400;
+    letter-spacing: .5px;
     line-height: 1.1;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
 }
 
 h2 {
-    font-size: clamp(2.2rem, 5vw, 4.5rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
 }
 
-.sub-label {
-    text-transform: uppercase;
-    font-size: clamp(0.6rem, 1.5vw, 0.7rem);
-    letter-spacing: 4px;
-    color: var(--primary-medical);
-    display: block;
-    margin-bottom: 20px;
-    opacity: 0.6;
-}
-
-/* ================= CUSTOM VECTOR TOOTH CURSOR ================= */
+/* ================= CUSTOM CURSOR ================= */
 #cursor { display: none; } 
 @media (pointer: fine) {
-    body, a, button, .gallery-img, .specialty-card, .logo { cursor: none !important; }
+    body, a, button, .gallery-img, iframe { cursor: none !important; }
     #cursor {
-        position: fixed; top: 0; left: 0; width: 32px; height: 32px;
-        pointer-events: none; z-index: 9999;
-        transition: transform 0.1s ease-out, width 0.3s, height 0.3s, opacity 0.3s;
+        position: fixed; top: 0; left: 0; width: 24px; height: 24px;
+        background: rgba(20, 184, 166, 0.2); border: 1px solid rgba(0, 210, 255, 0.4);
+        border-radius: 50%; pointer-events: none; z-index: 9999;
         display: flex; align-items: center; justify-content: center;
-        opacity: 0.8;
+        backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+        transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.4s, border-color 0.4s;
     }
-    #cursor svg {
-        width: 100%; height: 100%;
-        fill: none;
-        stroke: #fff;
-        stroke-width: 1.2;
-        filter: drop-shadow(0 0 5px rgba(0, 210, 255, 0.4));
-        transition: 0.3s;
+    #cursor::after {
+        content: "INFO"; font-family: Inter, sans-serif; font-size: 10px; letter-spacing: 2px;
+        color: #fff; opacity: 0; transition: opacity 0.3s; font-weight: 600;
     }
-    #cursor.hover-active { width: 50px; height: 50px; opacity: 1; }
-    #cursor.hover-active svg {
-        stroke: var(--primary-medical);
-        filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.8));
-        transform: rotate(15deg);
-    }
+    #cursor.hover-card { width: 75px; height: 75px; background: rgba(20, 184, 166, 0.8); border-color: transparent; }
+    #cursor.hover-card::after { opacity: 1; }
+    #cursor.hover-btn { width: 60px; height: 60px; background: rgba(0, 210, 255, 0.15); border-color: rgba(0, 210, 255, 0.6); }
 }
 
-/* ================= NAVIGATION ================= */
+/* ================= NAV ================= */
 nav {
     position: absolute; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 30px var(--pad-x); display: flex; flex-direction: column; align-items: center; gap: 20px;
+    padding: 25px var(--pad-x); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px;
 }
-@media (min-width: 768px) {
-    nav { flex-direction: row; justify-content: space-between; padding: 40px var(--pad-x); }
-}
+@media (min-width: 768px) { nav { flex-direction: row; justify-content: space-between; padding: 35px var(--pad-x); } }
+nav .logo { font-family: "Cormorant Garamond", serif; font-size: 1.5rem; letter-spacing: 2px; color: #fff; text-decoration: none; }
+nav .logo span { color: var(--primary-medical); font-style: italic; }
+nav div { display: flex; gap: 25px; flex-wrap: wrap; justify-content: center; }
+nav a { color: white; text-decoration: none; font-size: .75rem; letter-spacing: 2px; text-transform: uppercase; opacity: .7; transition: .3s; padding: 8px 0; }
+nav a:hover { opacity: 1; color: var(--primary-medical); text-shadow: 0 0 15px rgba(0, 210, 255, 0.4); }
 
-/* PREMIUM LOGO WITH GRADIENT OUTLINE */
-nav .logo { 
-    font-family: "Cormorant Garamond", serif; 
-    font-size: clamp(1.2rem, 2.5vw, 2rem); 
-    letter-spacing: 1px; 
-    color: #fff; 
-    text-decoration: none; 
-    font-weight: 300;
-    padding: 12px 24px;
-    position: relative;
-    display: inline-block;
-    transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    background: linear-gradient(var(--bg-deep), var(--bg-deep)) padding-box,
-                linear-gradient(135deg, rgba(255,255,255,0.05), var(--accent-glow), rgba(255,255,255,0.05)) border-box;
-    border: 1px solid transparent;
-}
 
-nav .logo strong { 
-    font-weight: 700; 
-    color: #fff;
-    margin-right: -1px;
-}
-
-nav .logo:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(0,210,255,0.15);
-    background: linear-gradient(var(--bg-deep), var(--bg-deep)) padding-box,
-                linear-gradient(135deg, rgba(255,255,255,0.3), rgba(0,210,255,0.8), rgba(255,255,255,0.3)) border-box;
-}
-
-nav div { display: flex; gap: 25px; }
-@media (min-width: 768px) { nav div { gap: 40px; } }
-nav a { color: white; text-decoration: none; font-size: .65rem; letter-spacing: 3px; text-transform: uppercase; opacity: 0.5; transition: .4s; }
-nav a:hover { opacity: 1; letter-spacing: 4px; color: var(--primary-medical); }
-
-/* ================= HERO SECTION ================= */
-.scroll-section { height: 180dvh; position: relative; }
-@media (min-width: 768px) { .scroll-section { height: 200dvh; } }
+/* ================= HERO ANIMATED SCROLL ================= */
+.scroll-section { height: 180dvh; position: relative; width: 100%; z-index: 10; }
+@media (min-width: 768px) { .scroll-section { height: 220dvh; } }
 
 .sticky-wrapper {
-    position: sticky; top: 0; height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;
+    position: sticky; top: 0; height: 100dvh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;
+    background: radial-gradient(circle at 50% 40%, rgba(0,210,255,0.03) 0%, rgba(6,10,13,1) 50%, #060a0d 100%); 
+    padding: 0 20px;
 }
 
-.scroll-text { text-align: center; z-index: 20; padding: 0 20px; }
-.scroll-text h1 { font-size: clamp(2.5rem, 8vw, 7rem); margin-bottom: 20px; }
-.scroll-text p { font-size: clamp(0.7rem, 1.8vw, 0.9rem); letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; max-width: 600px; margin: 0 auto; line-height: 1.5; }
+.scroll-text {
+    text-align: center; margin-bottom: 2rem; 
+    will-change: transform, opacity, filter;
+    opacity: 0; filter: blur(10px); transform: translateY(80px);
+}
+.scroll-text h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); margin-bottom: 1rem; }
+.scroll-text p { font-size: clamp(0.95rem, 2vw, 1.2rem); opacity: 0.8; max-width: 600px; margin: 0 auto; letter-spacing: 1px; }
 
-.hero-visual-container {
-    position: absolute; width: 100%; height: 100%; z-index: 5;
-    display: flex; justify-content: center; align-items: center;
-    clip-path: inset(100% 0% round 0px);
+.scroll-video-container {
+    position: relative; height: 50dvh; max-height: 500px; aspect-ratio: 9 / 16; max-width: 90vw;
+    display: flex; justify-content: center; pointer-events: none;
+    clip-path: inset(35% 40% round 1000px); -webkit-clip-path: inset(35% 40% round 1000px); 
     will-change: clip-path;
 }
+@media (min-width: 768px) { .scroll-video-container { height: 65dvh; max-height: 650px; } }
 
-.hero-visual-container img { 
-    width: 100%; height: 100%; object-fit: cover; 
-    filter: brightness(0.35) grayscale(0.2);
-    transform: scale(1.15); will-change: transform;
-}
+.scroll-video-container video { width: 100%; height: 100%; object-fit: cover; transform: scale(0.7); will-change: transform; filter: brightness(1.05) contrast(1.1); }
 
+/* Surgical Planning Hud Animation */
 .tech-overlay {
-    position: absolute; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: opacity 1s;
+    position: absolute; inset: 0; z-index: 5; opacity: 0; transition: opacity 1s ease;
+    pointer-events: none; display: flex; align-items: center; justify-content: center;
 }
-.tech-overlay svg { width: 80%; height: 80%; stroke: #fff; stroke-width: 0.2; fill: none; opacity: 0.15; }
+.tech-overlay.active { opacity: 0.7; }
+.tech-overlay svg { width: 90%; height: 90%; stroke: var(--primary-medical); stroke-width: 0.4; fill: none; overflow: visible; }
 
-/* ================= BUTTONS ================= */
-.btn-signature {
-    background: transparent; border: 1px solid rgba(255,255,255,0.2);
-    padding: 16px 32px; border-radius: 0px; color: #fff;
-    font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase;
-    transition: 0.5s; cursor: pointer; position: relative; overflow: hidden;
-    display: inline-block; text-decoration: none;
+.scan-line {
+    position: absolute; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--primary-medical), transparent);
+    top: 50%; opacity: 0; transition: opacity 0.5s;
 }
-@media (min-width: 768px) { .btn-signature { padding: 18px 40px; font-size: 0.7rem; letter-spacing: 4px; } }
-.btn-signature:hover { background: #fff; color: #000; border-color: #fff; box-shadow: 0 10px 30px rgba(255,255,255,0.2); }
+.tech-overlay.active .scan-line { animation: scanning 4s linear infinite; opacity: 0.5; }
 
-/* ================= PHILOSOPHY SECTION ================= */
-.philosophy-grid {
-    display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center;
-}
-@media (min-width: 1024px) { .philosophy-grid { grid-template-columns: 1.2fr 0.8fr; gap: 80px; } }
-
-.philosophy-text p {
-    font-size: clamp(1.1rem, 2.5vw, 1.3rem); line-height: 1.8; font-family: "Cormorant Garamond", serif; font-style: italic; opacity: 0.8;
+@keyframes scanning {
+    0% { top: 0%; }
+    50% { top: 100%; }
+    100% { top: 0%; }
 }
 
-/* ================= SPECIALTIES ================= */
-.specialty-card {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding: 30px 0; display: flex; flex-direction: column; gap: 15px;
-    transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-@media (min-width: 768px) {
-    .specialty-card { flex-direction: row; align-items: baseline; justify-content: space-between; padding: 40px 0; }
-}
-.specialty-card:hover { padding-left: 15px; border-color: #fff; background: rgba(255,255,255,0.02); }
-@media (min-width: 768px) { .specialty-card:hover { padding-left: 25px; } }
+.scroll-btn-wrapper { margin-top: 2rem; will-change: transform, opacity, filter; opacity: 0; filter: blur(10px); transform: translateY(-120px); }
 
-.specialty-card h4 { font-family: "Cormorant Garamond", serif; font-size: clamp(1.8rem, 4vw, 2.8rem); }
-.specialty-card p { max-width: 450px; font-size: 0.9rem; opacity: 0.5; line-height: 1.7; }
+/* ================= LUXURY MEDICAL BUTTONS ================= */
+.hero-btn, .cta-btn {
+    position: relative;
+    background: linear-gradient(#060a0d, #060a0d) padding-box,
+                linear-gradient(135deg, #00d2ff, #14b8a6, #0072ff) border-box;
+    border: 1px solid transparent; padding: 14px 32px; border-radius: 50px; color: white; 
+    font-family: Inter, sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; 
+    cursor: pointer; transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s, color 0.4s; 
+    box-shadow: 0 4px 20px rgba(0, 210, 255, 0.15); text-decoration: none;
+    display: inline-flex; align-items: center; justify-content: center;
+}
+.hero-btn:hover, .cta-btn:hover { 
+    transform: scale(1.05); box-shadow: 0 8px 30px rgba(0, 210, 255, 0.35); color: #00d2ff;
+}
 
-/* ================= GALLERY ================= */
+/* ================= TREATMENTS / CATEGORY FILTERS ================= */
+.category-nav { margin-top: 30px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; padding: 0 15px; }
+.cat-btn {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7);
+    padding: 10px 24px; border-radius: 30px; font-family: Inter, sans-serif; font-size: 0.75rem; letter-spacing: 1px;
+    text-transform: uppercase; cursor: pointer; transition: 0.3s; backdrop-filter: blur(5px);
+}
+.cat-btn:hover { background: rgba(255,255,255,0.1); color: white; }
+.cat-btn.active {
+    background: rgba(0, 210, 255, 0.1); border-color: rgba(0, 210, 255, 0.5); color: #00d2ff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+}
+
+.category-info-box {
+    margin-top: 25px; min-height: 120px; transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 0 20px; max-width: 650px; margin-left: auto; margin-right: auto;
+}
+.category-info-box h4 {
+    font-family: "Cormorant Garamond", serif; font-size: 1.8rem; color: #00d2ff; margin-bottom: 8px; font-style: italic;
+}
+.category-info-box p { font-size: 0.95rem; opacity: 0.8; line-height: 1.6; }
+
+/* ================= JOURNEY TIMELINE ================= */
+.journey-grid {
+    display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 60px; text-align: left;
+}
+@media (min-width: 768px) { .journey-grid { grid-template-columns: 1fr 1fr; } }
+.journey-item {
+    background: rgba(255,255,255,0.02); border-left: 2px solid var(--primary-medical); padding: 30px; border-radius: 0 16px 16px 0; transition: 0.4s;
+}
+.journey-item:hover { background: rgba(0, 210, 255, 0.05); transform: translateX(10px); }
+.journey-item h4 { font-family: "Cormorant Garamond", serif; font-size: 1.6rem; color: #fff; margin-bottom: 5px; }
+.journey-item .sub { font-size: 0.8rem; color: var(--primary-medical); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; font-weight: 500; }
+.journey-item p { font-size: 0.9rem; opacity: 0.7; line-height: 1.5; }
+
+/* ================= 3D ANIMATED PORTFOLIO GALLERY ================= */
+.portfolio-scroll-section { height: 220dvh; position: relative; width: 100%; margin-top: 80px; z-index: 10; }
+@media (min-width: 768px) { .portfolio-scroll-section { height: 320dvh; } } 
+
+.portfolio-sticky {
+    position: sticky; top: 0; height: 100dvh; width: 100%; overflow: hidden;
+    perspective: 1200px; perspective-origin: center top; display: flex; justify-content: center; align-items: center;
+}
+
 .gallery-container {
-    display: grid; grid-template-columns: 1fr; gap: 20px;
+    position: relative; z-index: 10; display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 12px; width: 100vw; max-width: 1400px; padding: 0 15px;
+    transform-style: preserve-3d; will-change: transform; transform-origin: 50% 50%;
 }
-@media (min-width: 640px) { .gallery-container { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .gallery-container { grid-template-columns: repeat(3, 1fr); gap: 30px; } }
+@media (min-width: 768px) { .gallery-container { gap: 30px; padding: 0 40px; } }
+
+.gallery-col { display: flex; flex-direction: column; gap: 12px; will-change: transform; width: 100%; }
+@media (min-width: 768px) { .gallery-col { gap: 30px; } }
+.gallery-col.col-2 { margin-top: -40%; }
 
 .gallery-img {
-    width: 100%; aspect-ratio: 3/4; object-fit: cover; filter: saturate(0) brightness(0.7);
-    transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    border-radius: 2px;
+    width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8); transition: transform 0.4s ease, filter 0.4s ease;
+    filter: brightness(0.8) contrast(1.1);
 }
-.gallery-img:hover { filter: saturate(1) brightness(1); transform: translateY(-10px); }
+@media (pointer: fine) { .gallery-img:hover { transform: scale(1.03); filter: brightness(1); } }
 
-footer {
-    padding: 80px var(--pad-x); text-align: center; border-top: 1px solid rgba(255,255,255,0.05);
-}
-@media (min-width: 768px) { footer { padding: 120px var(--pad-x); } }
+/* Universal Reveal Settings */
+.reveal { opacity: 0; transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); will-change: transform, opacity; }
+.reveal.active { opacity: 1; transform: translate(0, 0) !important; }
 
-.footer-logo { font-family: "Cormorant Garamond", serif; font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 24px; display: block; }
+/* Reveal Directions */
+.reveal-up { transform: translateY(40px); }
+.reveal-left { transform: translateX(-80px); }
+.reveal-right { transform: translateX(80px); }
 
-/* REVEAL ANIMATIONS */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+footer { text-align: center; padding: 60px 20px; opacity: .4; letter-spacing: 2px; font-size: .7rem; position: relative; z-index: 10; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 50px; }
 </style>
 </head>
 
 <body>
 
 <div class="ambient-glow"></div>
-
-<!-- CUSTOM MOLAR CURSOR (Hidden on mobile/touch) -->
-<div id="cursor">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.5 9.5C4.5 6.5 7 4 10 4H14C17 4 19.5 6.5 19.5 9.5C19.5 12 17.5 13.5 17.5 16C17.5 18.5 16 20 14 20C12.5 20 12 19 12 18C12 19 11.5 20 10 20C8 20 6.5 18.5 6.5 16C6.5 13.5 4.5 12 4.5 9.5Z" />
-    </svg>
-</div>
+<div id="cursor"></div>
 
 <nav>
-    <a href="#" class="logo">
-        Dr. <strong>K</strong>arishma Ashok
-    </a>
+    <a href="#" class="logo">DR. KARISHMA <span>ASHOK</span></a>
     <div>
-        <a href="#specialties">Practice</a>
-        <a href="#clinical">Clinical</a>
-        <a href="#contact">Inquire</a>
+        <a href="#specialties">SPECIALTIES</a>
+        <a href="#journey">JOURNEY</a>
+        <a href="#clinical-work">CLINICAL WORK</a>
+        <a href="#contact">APPOINTMENT</a>
     </div>
 </nav>
 
-<section id="hero-trigger" class="scroll-section">
+<section id="hero-scroll-section" class="scroll-section">
     <div class="sticky-wrapper">
         <div class="scroll-text">
-            <span class="sub-label" style="opacity: 0.4;">Bespoke Oral Implantology</span>
-            <h1>The Architecture <br>of a Smile</h1>
-            <p>MDS | Specialist in Microsurgical Regeneration</p>
+            <h1 style="font-style: italic;">Where Precision Meets</h1>
+            <h1 style="margin-top: -15px;">Confidence.</h1>
+            <p>MDS | Specialist in Oral Implantology & Microsurgical Periodontics</p>
+            <p style="font-size: 0.85rem; margin-top: 10px; opacity: 0.6;">Dr Karishma's Dental Clinic and Implant Centre | Seawoods, Navi Mumbai</p>
         </div>
 
-        <div class="hero-visual-container" id="heroVisual">
+        <div class="scroll-video-container">
             <div class="tech-overlay" id="techOverlay">
+                <div class="scan-line"></div>
+                <!-- Interactive Surgical Guideline SVG -->
                 <svg viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" stroke-dasharray="0.5 4" />
-                    <path d="M10 50 L90 50 M50 10 L50 90" stroke-width="0.1" />
-                    <text x="2" y="5" font-family="monospace" font-size="2" fill="#fff">SCALE_VERIFIED: 1:1</text>
+                    <circle cx="50" cy="50" r="48" stroke-dasharray="0.5 2" opacity="0.3" />
+                    <circle cx="50" cy="50" r="30" stroke-dasharray="1 4" />
+                    <path d="M50 5 L50 20 M95 50 L80 50 M50 95 L50 80 M5 50 L20 50" stroke-width="0.8" />
+                    
+                    <g opacity="0.6">
+                        <text x="5" y="15" font-family="monospace" font-size="2" fill="currentColor">SCAN_MODE: 3D_CBCT</text>
+                        <text x="5" y="19" font-family="monospace" font-size="2" fill="currentColor">GUIDE_STATUS: ALIGNED</text>
+                        <text x="70" y="15" font-family="monospace" font-size="2" fill="currentColor">DEPTH_SENS: 12mm</text>
+                    </g>
+
+                    <!-- Central Crosshair -->
+                    <path d="M45 50 L55 50 M50 45 L50 55" stroke-width="0.5" />
+                    
+                    <!-- Surgical "Targeting" corners -->
+                    <path d="M30 35 L30 30 L35 30" />
+                    <path d="M65 30 L70 30 L70 35" />
+                    <path d="M70 65 L70 70 L65 70" />
+                    <path d="M35 70 L30 70 L30 65" />
                 </svg>
             </div>
-            <img id="heroImage" src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=2000" alt="Precision Outcome">
+            <!-- High-end Medical/Dental Visualization Video -->
+            <video class="scroll-video" src="https://videos.pexels.com/video-files/4269382/4269382-uhd_2560_1440_25fps.mp4" autoplay loop muted playsinline aria-label="Professional medical visualization showing dental health and precision"></video>
+        </div>
+
+        <div class="scroll-btn-wrapper">
+            <a href="#contact" style="text-decoration: none;"><button class="hero-btn">Consult Specialist</button></a>
         </div>
     </div>
 </section>
 
-<section id="philosophy" class="reveal">
-    <div class="philosophy-grid">
-        <div class="philosophy-text">
-            <span class="sub-label">Our Philosophy</span>
-            <h2>Where Clinical Precision <br>meets Aesthetic Artistry.</h2>
-            <p>
-                "Oral implantology is more than surgery; it is the restoration of structural harmony. 
-                Under the care of Dr. Karishma Ashok, every procedure is a bespoke journey—utilizing 
-                digital planning to ensure a result that is as biologically sound as it is visually perfect."
-            </p>
+<!-- ================= SPECIALTIES SECTION ================= -->
+<div id="specialties" style="padding-top: 60px; text-align: center; position: relative; z-index: 10;" class="reveal reveal-up">
+    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: #fff; margin-bottom: 10px;">Specialist Care</h3>
+    <p style="opacity: 0.7; font-size: 0.95rem; margin-bottom: 30px; max-width: 500px; margin-left: auto; margin-right: auto;">Combining surgical expertise with advanced digital workflows for predictable results.</p>
+
+    <div class="category-nav">
+        <button class="cat-btn active" data-cat="implants">Oral Implants</button>
+        <button class="cat-btn" data-cat="periodontics">Periodontics</button>
+        <button class="cat-btn" data-cat="laser">Laser Surgery</button>
+        <button class="cat-btn" data-cat="esthetics">Gingival Esthetics</button>
+    </div>
+
+    <div id="category-info" class="category-info-box">
+        <h4>Advanced Oral Implantology</h4>
+        <p>Expert placement of dental implants ranging from single tooth replacements to full-mouth rehabilitations using high-grade titanium and zirconia systems for maximum biocompatibility.</p>
+    </div>
+</div>
+
+<!-- ================= JOURNEY SECTION (CREDENTIALS) ================= -->
+<section id="journey" style="text-align: center; overflow: hidden;">
+    <h2 class="reveal reveal-up">Clinical <span style="color: #00d2ff; font-style: italic;">Journey</span></h2>
+    <div class="journey-grid">
+        <!-- Item 1: Fly in from Left -->
+        <div class="journey-item reveal reveal-left">
+            <span class="sub">Principal Practice</span>
+            <h4>Dr Karishma's Dental Clinic</h4>
+            <p>Owner and Chief Implantologist at her state-of-the-art facility in Seawoods, Navi Mumbai. Focusing on complex oral rehabilitations.</p>
         </div>
-        <div style="text-align: right;">
-             <a href="#contact" class="btn-signature">Request a Private Consultation</a>
+        <!-- Item 2: Fly in from Right -->
+        <div class="journey-item reveal reveal-right">
+            <span class="sub">Specialized Residency</span>
+            <h4>MDS in Periodontology</h4>
+            <p>Completed post-graduation from A B Shetty Memorial Institute of Dental Sciences, mastering surgical gum therapies and regenerative bone procedures.</p>
+        </div>
+        <!-- Item 3: Fly in from Left -->
+        <div class="journey-item reveal reveal-left">
+            <span class="sub">Advanced Fellowship</span>
+            <h4>Fellowship in Oral Implantology</h4>
+            <p>FDS-OI certified, specializing in the engineering and surgical placement of biocompatible implant systems for lifelong stability.</p>
+        </div>
+        <!-- Item 4: Fly in from Right -->
+        <div class="journey-item reveal reveal-right">
+            <span class="sub">Innovation & Leadership</span>
+            <h4>Co-Founder, Dentronics</h4>
+            <p>Driving technological advancements in modern dentistry through research and collaborative innovation in Mangaluru.</p>
         </div>
     </div>
 </section>
 
-<section id="specialties">
-    <span class="sub-label">Areas of Excellence</span>
-    
-    <div class="specialty-card reveal">
-        <h4>Signature Implants</h4>
-        <p>Bespoke dental implant systems utilizing 3D bone mapping and guided surgery for a seamless integration with your natural anatomy.</p>
-    </div>
+<!-- ================= 3D CLINICAL GALLERY ================= -->
+<div id="clinical-work" style="padding-top: 120px; text-align: center; position: relative; z-index: 10;">
+    <h2 class="reveal reveal-up">Surgical <span style="color: #00d2ff; font-style: italic;">Portfolio</span></h2>
+    <p class="reveal reveal-up" style="margin-top: 16px; opacity: 0.6; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1rem; padding: 0 15px;">
+        A visual journey through advanced periodontal therapy and digital surgical planning.
+    </p>
+</div>
 
-    <div class="specialty-card reveal">
-        <h4>Periodontal Microsurgery</h4>
-        <p>Minimally invasive gum regeneration and tissue grafting aimed at preserving the foundational health of your smile.</p>
-    </div>
-
-    <div class="specialty-card reveal">
-        <h4>Gingival Sculpting</h4>
-        <p>Aesthetic laser contouring designed to correct gum symmetry, often referred to as the 'Pink Aesthetic'—the framing of a perfect smile.</p>
-    </div>
-</section>
-
-<section id="clinical">
-    <span class="sub-label">Clinical Showcase</span>
-    <div class="gallery-container">
-        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" class="gallery-img reveal" alt="Practice Room">
-        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" class="gallery-img reveal" alt="Microscope Technology">
-        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" class="gallery-img reveal" alt="Surgical Setup">
+<section id="portfolio-scroll" class="portfolio-scroll-section">
+    <div class="portfolio-sticky">
+        <div class="gallery-container" id="animated-gallery">
+            <div class="gallery-col col-1"></div>
+            <div class="gallery-col col-2"></div>
+            <div class="gallery-col col-3"></div>
+        </div>
     </div>
 </section>
 
-<section id="contact" style="text-align: center;">
-    <span class="sub-label">Engagement</span>
-    <h2>Begin Your Transformation</h2>
-    <div style="margin-top: 50px;">
-        <a href="https://wa.me/919000000000" class="btn-signature">Inquire via Concierge</a>
+<section id="contact" style="text-align:center; padding-bottom: 100px;">
+    <h2 class="reveal reveal-up" style="margin-bottom: 20px;">Visit Our Facility</h2>
+    <p class="reveal reveal-up" style="opacity: 0.8; margin-bottom: 8px; max-width: 600px; margin-left: auto; margin-right: auto; font-weight: 500;">Dr Karishma's Dental Clinic and Implant Centre</p>
+    <p class="reveal reveal-up" style="opacity: 0.6; margin-bottom: 40px; font-size: 0.95rem; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+        Seawoods, Navi Mumbai, Maharashtra, India
+    </p>
+    <div class="reveal reveal-up" style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+        <a href="https://wa.me/919000000000?text=Hello%20Dr.%20Karishma,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="cta-btn">Book Consultation</a>
+        <a href="https://www.google.com/maps/place/Dr+Karishma%E2%80%99s+Dental+Clinic+and+Implant+Centre/@19.0251281,73.0177578,17z/data=!4m6!3m5!1s0x3be7c365bde04329:0x67f10196d3e1ed38!8m2!3d19.0251281!4d73.0177578!16s%2Fg%2F11x2xzw613" target="_blank" class="cta-btn">View on Maps</a>
+        <a href="mailto:contact@drkarishma.com" class="cta-btn">Email Specialist</a>
     </div>
 </section>
 
 <footer>
-    <span class="footer-logo">Dr. Karishma Ashok</span>
-    <p style="font-size: 0.65rem; letter-spacing: 4px; opacity: 0.3; text-transform: uppercase;">
-        Mumbai | Periodontist & Implantologist
-    </p>
+    © 2026 DR. KARISHMA ASHOK | MDS PERIODONTOLOGY & ORAL IMPLANTOLOGY
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-    const cursor = document.getElementById('cursor');
-    const heroVisual = document.getElementById('heroVisual');
+    // ================= HIGH-PERFORMANCE SCROLL ENGINE =================
+    let isScrolling = false;
+    const heroSection = document.getElementById('hero-scroll-section');
+    const scrollText = document.querySelector('.scroll-text');
+    const scrollVideoContainer = document.querySelector('.scroll-video-container');
+    const scrollVideo = document.querySelector('.scroll-video');
     const techOverlay = document.getElementById('techOverlay');
-    const heroImage = document.getElementById('heroImage');
+    const scrollBtnWrapper = document.querySelector('.scroll-btn-wrapper');
+    const portSection = document.getElementById('portfolio-scroll');
+    const galleryContainer = document.getElementById('animated-gallery');
+    const col1 = document.querySelector('.gallery-col.col-1');
+    const col2 = document.querySelector('.gallery-col.col-2');
+    const col3 = document.querySelector('.gallery-col.col-3');
 
-    // ================= CURSOR LOGIC =================
-    if (window.matchMedia("(pointer: fine)").matches) {
-        document.getElementById('cursor').style.display = 'flex';
-        
-        let mouseX = 0; let mouseY = 0;
-        let cursorX = 0; let cursorY = 0;
+    function handleScrollAnimations() {
+        if(heroSection) {
+            const rect = heroSection.getBoundingClientRect();
+            const scrollRange = rect.height - window.innerHeight;
+            let progress = -rect.top / scrollRange;
+            progress = Math.max(0, Math.min(1, progress));
 
-        window.addEventListener('mousemove', e => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
+            let pText = Math.max(0, Math.min((progress - 0.1) / 0.6, 1));
+            scrollText.style.transform = `translate3d(0, ${80 - (80 * pText)}px, 0)`;
+            scrollText.style.opacity = pText;
+            scrollText.style.filter = `blur(${10 - (10 * pText)}px)`;
+
+            let pAnim = Math.min(progress / 0.8, 1);
+            let insetY = 35 - (35 * pAnim);
+            let insetX = 40 - (40 * pAnim);
+            let round = 1000 - (980 * pAnim);
+            scrollVideoContainer.style.clipPath = `inset(${insetY}% ${insetX}% round ${round}px)`;
+            scrollVideoContainer.style.webkitClipPath = `inset(${insetY}% ${insetX}% round ${round}px)`;
+            scrollVideo.style.transform = `scale(${0.75 + (0.25 * pAnim)}) translateZ(0)`;
+
+            if (pAnim > 0.45) { techOverlay.classList.add('active'); } 
+            else { techOverlay.classList.remove('active'); }
+
+            let pBtn = Math.min(progress / 0.7, 1);
+            scrollBtnWrapper.style.transform = `translate3d(0, ${-120 + (120 * pBtn)}px, 0)`;
+            scrollBtnWrapper.style.opacity = pBtn;
+        }
+
+        if (portSection && galleryContainer) {
+            const pRect = portSection.getBoundingClientRect();
+            const pScrollRange = pRect.height - window.innerHeight;
+            let pProgress = -pRect.top / pScrollRange;
+            pProgress = Math.max(0, Math.min(1, pProgress));
+
+            let pRotate = Math.min(pProgress / 0.5, 1);
+            let rotateX = 75 - (75 * pRotate);
+            let pScale = Math.max(0, Math.min((pProgress - 0.5) / 0.4, 1));
+            let scale = 1.2 - (0.2 * pScale);
+
+            galleryContainer.style.transform = `rotateX(${rotateX}deg) scale(${scale}) translateZ(0)`;
+
+            let pCol = Math.max(0, Math.min((pProgress - 0.5) / 0.5, 1));
+            col1.style.transform = `translate3d(0, ${-10 + (12 * pCol)}%, 0)`;
+            col3.style.transform = `translate3d(0, ${-10 + (12 * pCol)}%, 0)`;
+            col2.style.transform = `translate3d(0, ${15 - (10 * pCol)}%, 0)`;
+        }
+        isScrolling = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!isScrolling) {
+            window.requestAnimationFrame(handleScrollAnimations);
+            isScrolling = true;
+        }
+    }, { passive: true });
+
+    // ================= CLINICAL GALLERY DATA =================
+    const clinicalImages = [
+        "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1629909615184-74f49af3b77e?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800"
+    ];
+
+    if(col1) col1.innerHTML = clinicalImages.slice(0, 3).map(src => `<img src="${src}" class="gallery-img" alt="Practice">`).join('');
+    if(col2) col2.innerHTML = clinicalImages.slice(3, 6).map(src => `<img src="${src}" class="gallery-img" alt="Surgery">`).join('');
+    if(col3) col3.innerHTML = clinicalImages.slice(6, 9).map(src => `<img src="${src}" class="gallery-img" alt="Technology">`).join('');
+
+    // ================= CATEGORY INTERACTION =================
+    const categoryDetails = {
+        implants: { title: "Advanced Oral Implantology", desc: "Expert placement of dental implants ranging from single tooth replacements to full-mouth rehabilitations using high-grade titanium and zirconia systems." },
+        periodontics: { title: "Periodontal Therapy", desc: "Specialized treatment for gum diseases (Gingivitis & Periodontitis), bone grafting, and regenerative procedures to save your natural teeth." },
+        laser: { title: "Laser-Assisted Surgery", desc: "Minimally invasive soft-tissue procedures using advanced laser technology for faster healing, less bleeding, and virtually painless recovery." },
+        esthetics: { title: "Gingival Esthetics", desc: "Smile enhancement through crown lengthening, gum contouring, and depigmentation to achieve the perfect 'pink' aesthetic for your smile." }
+    };
+
+    const catButtons = document.querySelectorAll('.cat-btn');
+    const catInfoBox = document.getElementById('category-info');
+
+    catButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            catButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            catInfoBox.style.opacity = 0;
+            setTimeout(() => {
+                const data = categoryDetails[btn.dataset.cat];
+                catInfoBox.innerHTML = `<h4>${data.title}</h4><p>${data.desc}</p>`;
+                catInfoBox.style.opacity = 1;
+            }, 300);
         });
+    });
 
+    // ================= REVEAL OBSERVER =================
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ================= CURSOR ANIMATION =================
+    if (window.matchMedia("(pointer: fine)").matches) {
+        let mouseX = window.innerWidth / 2; let mouseY = window.innerHeight / 2;
+        let cursorX = mouseX; let cursorY = mouseY;
+        const cursor = document.getElementById('cursor');
+        window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
         function animateCursor() {
-            let dx = mouseX - cursorX;
-            let dy = mouseY - cursorY;
-            cursorX += dx * 0.2;
-            cursorY += dy * 0.2;
-            
+            cursorX += (mouseX - cursorX) * 0.15;
+            cursorY += (mouseY - cursorY) * 0.15;
             cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
             requestAnimationFrame(animateCursor);
         }
         animateCursor();
-
-        document.querySelectorAll('a, button, .gallery-img, .specialty-card, .logo').forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hover-active'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hover-active'));
+        document.querySelectorAll('a, button, .gallery-img').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add(el.classList.contains('gallery-img') ? 'hover-card' : 'hover-btn'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover-card', 'hover-btn'));
         });
     }
 
-    // ================= SCROLL ENGINE =================
-    function handleScroll() {
-        const winH = window.innerHeight;
-
-        // Hero Parallax & Expansion
-        const heroTrigger = document.getElementById('hero-trigger');
-        const heroRect = heroTrigger.getBoundingClientRect();
-        
-        // Progress from 0 to 1 based on hero scroll
-        let progress = Math.max(0, Math.min(1, -heroRect.top / (heroRect.height - winH)));
-
-        // Expansion clip logic
-        let clipProgress = Math.max(0, (progress - 0.1) / 0.85);
-        let insetTop = 100 - (100 * clipProgress);
-        
-        heroVisual.style.clipPath = `inset(${insetTop}% 0% round 0px)`;
-        heroImage.style.transform = `scale(${1.15 - (0.15 * clipProgress)})`;
-        
-        if(clipProgress > 0.5) {
-            techOverlay.style.opacity = (clipProgress - 0.5) * 2;
-        } else {
-            techOverlay.style.opacity = 0;
-        }
-
-        // Reveal animations
-        document.querySelectorAll('.reveal').forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if(rect.top < winH * 0.9) {
-                el.classList.add('active');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Initial call
+    window.dispatchEvent(new Event('scroll'));
 });
 </script>
 
